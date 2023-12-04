@@ -1,0 +1,334 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heavenly | Tiptoe Soles</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <!-------Menu-------->
+    <section class="menu">
+        <!-----Menu----->
+        <div class="menubar">
+            <div class="logo">
+                <a href="index.html"><img id="logo" src="image/TipToe Soles_Logo_colour.png" alt="Logo" /></a>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="'Item Color' or 'item color'" id="searchInput" autocomplete="off">
+                <button class="searchbtn" onclick="performSearch()">Search</button>
+            </div>
+
+            <nav>
+                <div class="nav-links" id="navLinks">
+                    <!-----Close menu for small devices----->
+                    <i class="fa fa-times-circle-o" onclick="hideMenu()"></i>
+                    <ul>
+                        <!-----Menu---->
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="wishlist.html">Wishlist</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <!----Show menu for small devices---->
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+            <a href="cart.html"><i class="fa fa-shopping-cart" id="cart"></i></a>
+        </div>
+    </section>
+
+    <!----Product Details---->
+    <section class="prodsdetails">
+        <div class="prodrow">
+            <div class="col-2">
+                <img src="image/Heavenly Black.jpg" width="400" height="300" />
+                <h1>Heavenly</h1>
+                <h4>Color: Black</h4>
+                <h4>$90.00</h4>
+            </div>
+            <div class="col-2">
+                <p>Home/Products</p>
+
+                <select id="sizeDropdown">
+                    <option>Select Size</option>
+                    <option>US 6</option>
+                    <option>US 7</option>
+                    <option>US 8</option>
+                    <option>US 9</option>
+                    <option>US 10</option>
+                    <option>US 11</option>
+                </select>
+                <input type="number" id="quantityInput" value="1" />
+                <button class="cart-button" onclick="addToCart()">Add to Cart</button>
+                <button class="wishlist-button" onclick="addToWishlist()">Add to Wishlist</button>
+                <div id="heavblText">
+                    <h3>Product Details</h3>
+                    <p>
+                        Perfect for those on their feet all day who require leather uppers for easy cleaning.
+                        Featuring a super flexible and grippy outsole for durability and a soft padded footbed for extra comfort.
+                        <ul>
+                            <li>- Soft leather uppers and lightly padded collar</li>
+                            <li>- Plush footbed for added comfort</li>
+                            <li>- Recycled heel grip</li>
+                            <li>- Flexible and grippy outsole with 10% recycled material</li>
+                        </ul>
+
+                    </p>
+                    <h4>Materials & Details</h4>
+                    <ul>
+                        <li>• Product Code: 30213</li>
+                        <li>• Sole Material: Rubber</li>
+                        <li>• Sock Material: Synthetic</li>
+                        <li>• Lining Material: Eco friendly</li>
+                        <li>• Upper Material: Leather</li>
+                    </ul>
+                </div>
+                <button id="readButton">Read Text</button>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!------ Related Products ------->
+
+    <section class="relatedprods">
+        <div class="relatedtitle">
+            <div class="row1 title">
+                <h2>Related Products</h2>
+            </div>
+        </div>
+        <div class="relatedproducts">
+            <div class="row1">
+                <div class="product-col1">
+                    <a href="clancy.html">
+                        <img src="image/Clancy Blue.jpg" width="210" height="150" />
+                        <h3>Clancy Blue</h3>
+                        <p>
+                            The Clancy sandal allows air circulation due to the holes on each side.
+                            These sandals provide support to tired feet. The arch support design eliminates any strain or imbalance.
+                            Stretchable mesh fabric allows an easy fit Memory foam insoles
+                        </p>
+                    </a>
+                </div>
+                <div class="product-col1">
+                    <a href="sallytan.html">
+                        <img src="image/Sally Tan.jpg" width="210" height="150" />
+                        <h3>Sally Tan</h3>
+                        <p>
+                            Sally our new favourite lightweight flat is giving our serious comfort goals,
+                            with it's soft semi line uppers and padded arch support.
+                        </p>
+                    </a>
+                </div>
+                <div class="product-col1">
+                    <a href="wawchesnut.html">
+                        <img src="image/Work and Walk Chesnut.jpg" width="210" height="150" />
+                        <h3>Work and Walk Chesnut</h3>
+                        <p>
+                            Hiking-inspired with everyday style, meet the Work and Walk boot.
+                            With leather upper, these lace-up ankle boots are built for long days on your feet.
+                            The exterior features our No-Worry leather to protect from scuff, stain and water.
+                            Plus, the inside is pretty comfy as well with a soft footbed that hugs your heel for extra support.
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-----Footer---->
+    <section class="footer">
+        <!---list the footer links-->
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <img src="image/TipToe Soles_Logo_colour.png" />
+                </div>
+                <div class="footer-col-2">
+                    <h3>Policies</h3>
+                    <ul>
+                        <li><a href="delivery.html">Delivery Policies</a></li>
+                        <li><a href="returnandexchange.html">Return Policies</a></li>
+                        <li><a href="returnandexchange.html">Exchange Policies</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Social Media</h3>
+                    <ul>
+                        <li><a href="https://www.facebook.com/">Facebook <i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://twitter.com/?lang=en">Twitter <i class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://www.instagram.com/">Instagram <i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2023</p>
+
+
+        </div>
+
+    </section>
+
+
+
+
+
+    <!-----------JavaScript for Menu--------->
+    <script>
+
+        var navLinks = document.getElementById("navLinks");
+        // Shows the menu on a small device
+        function showMenu() {
+            navLinks.style.right = "0"
+        }
+        // Hides the menu on a small device
+        function hideMenu() {
+            navLinks.style.right = "-150px"
+        }
+    </script>
+
+    <!-----Javascript for search------>
+    <script>
+        // Sample dataset of products
+        var products = [
+            { id: 1, name: "clancy blue", page: "clancy.html" },
+            { id: 2, name: "gary black", page: "garybl.html" },
+            { id: 3, name: "gary tan", page: "garytan.html" },
+            { id: 4, name: "heavenly black", page: "heavenlybl.html" },
+            { id: 5, name: "sally black", page: "sallybl.html" },
+            { id: 6, name: "sally tan", page: "sallytan.html" },
+            { id: 7, name: "work and walk chesnut", page: "wawchesnut.html" },
+            { id: 8, name: "Gary Black", page: "garybl.html" },
+            { id: 9, name: "Clancy Blue", page: "clancy.html" },
+            { id: 10, name: "Heavenly Black", page: "heavenlybl.html" },
+            { id: 11, name: "Gary Tan", page: "garytan.html" },
+            { id: 12, name: "Sally Black", page: "sallybl.html" },
+            { id: 13, name: "Sally Tan", page: "sallytan.html" },
+            { id: 14, name: "Work and walk Chesnut", page: "wawchesnut.html" },
+            // Add more products as needed
+        ];
+
+        function performSearch() {
+            // Get the search query from the input field
+            var searchInput = document.getElementById("searchInput");
+            var searchQuery = searchInput.value.trim().toLowerCase();
+
+            // Check if the entered search query matches any product name
+            var matchingProduct = products.find(function (product) {
+                return product.name.toLowerCase() === searchQuery;
+            });
+
+            // If a matching product is found, redirect to its page
+            if (matchingProduct) {
+                window.location.href = matchingProduct.page;
+            } else {
+                // Display a message or handle no matching product scenario
+                alert("Product not found. Please try again.");
+            }
+        }
+
+        // Add event listener to the search input for "Enter" key press
+        var searchInput = document.getElementById("searchInput");
+        searchInput.addEventListener("keyup", function (event) {
+            if (event.key === "Enter") {
+                performSearch();
+            }
+        });
+    </script>
+
+    <!----Javascript for Add to cart ------>
+    <script>
+        function addToCart() {
+            var selectedSize = document.querySelector("#sizeDropdown").value;  // Fix: Change to sizeDropdown
+            var selectedQuantity = parseInt(document.querySelector("#quantityInput").value);
+
+            if (isNaN(selectedQuantity) || selectedQuantity <= 0) {
+                alert("Please select a valid quantity.");
+                return;
+            }
+
+            var product = {
+                name: "Heavenly Black", // Update with actual product name
+                price: 90.00, // Update with actual product price
+                size: selectedSize,
+                quantity: selectedQuantity,
+                image: "image/Heavenly Black.jpg" // Add the image source here
+            };
+
+            var existingCart = JSON.parse(localStorage.getItem("cart")) || [];
+            existingCart.push(product);
+
+            localStorage.setItem("cart", JSON.stringify(existingCart));
+
+            alert("Product added to cart!");
+        }
+    </script>
+
+    <!----Javascript for Add to wishlist ------>
+    <script>
+        function addToWishlist() {
+            var selectedSize = document.querySelector("#sizeDropdown").value;
+            var selectedQuantity = parseInt(document.querySelector("#quantityInput").value);
+
+            if (isNaN(selectedQuantity) || selectedQuantity <= 0) {
+                alert("Please select a valid quantity.");
+                return;
+            }
+
+            var product = {
+                name: "Heavenly Black", // Update with actual product name
+                price: 90.00, // Update with actual product price
+                size: selectedSize,
+                quantity: selectedQuantity,
+                image: "image/Heavenly Black.jpg" // Add the image source here
+            };
+
+
+            var existingWish = JSON.parse(localStorage.getItem("wish")) || [];
+            existingWish.push(product);
+
+            localStorage.setItem("wish", JSON.stringify(existingWish));
+
+            alert("Product added to wishlist!");
+
+            // Redirect to the wishlist page
+            window.location.href = "wishlist.html";
+        }
+    </script>
+    
+    <!------JavaScript for text to speech----->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Check if the browser supports the SpeechSynthesis API
+            if ('speechSynthesis' in window) {
+                // Get the button and the content of the about text
+                const readButton = document.getElementById('readButton');
+                const heavblText = document.getElementById('heavblText').textContent;
+
+                // Create a SpeechSynthesisUtterance object
+                const utterance = new SpeechSynthesisUtterance(heavblText);
+
+                // Use the default speech synthesis voice
+                utterance.voice = speechSynthesis.getVoices()[0];
+
+                // Attach a click event listener to the button
+                readButton.addEventListener('click', function () {
+                    // Speak the text when the button is clicked
+                    speechSynthesis.speak(utterance);
+                });
+            } else {
+                alert('Text-to-speech is not supported in this browser.');
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>About Us | Tiptoe Soles</title>
+     <link rel="stylesheet"  href="style.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <!-------Menu-------->
+        <!-----Menu----->
+        <div class="menubar">
+            <div class="logo">
+                <a href="index.html"><img id="logo" src="image/TipToe Soles_Logo_colour.png" alt="Logo" /></a>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="'Item Color' or 'item color'" id="searchInput" autocomplete="off">
+                <button class="searchbtn" onclick="performSearch()">Search</button>
+            </div>
+
+            <nav>
+                <div class="nav-links" id="navLinks">
+                    <!-----Close menu for small devices----->
+                    <i class="fa fa-times-circle-o" onclick="hideMenu()"></i>
+                    <ul>
+                        <!-----Menu---->
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="wishlist.html">Wishlist</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <!----Show menu for small devices---->
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+            <a href="cart.html"><i class="fa fa-shopping-cart" id="cart"></i></a>
+        </div>
+    </section>
+
+
+    <!---about page--->
+    <section class="about">
+        <div class="row aboutrow">
+            <div class="about-col">
+                <h1>About Us</h1>
+                <h2 id="aboutText">
+                    TipToe Soles is an Australian owned and operated company.
+                    We aim to provide comfortable footwear at affordable prices to customers within Australia and around the world.
+                </h2>
+                <button id="readButton">Read Text</button>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-----Footer---->
+    <section class="footer">
+        <!---list the footer links-->
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <img src="image/TipToe Soles_Logo_colour.png" />
+                </div>
+                <div class="footer-col-2">
+                    <h3>Policies</h3>
+                    <ul>
+                        <li><a href="delivery.html">Delivery Policies</a></li>
+                        <li><a href="returnandexchange.html">Return Policies</a></li>
+                        <li><a href="returnandexchange.html">Exchange Policies</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Social Media</h3>
+                    <ul>
+                        <li><a href="https://www.facebook.com/">Facebook <i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://twitter.com/?lang=en">Twitter <i class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://www.instagram.com/">Instagram <i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2023</p>
+
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-----------JavaScript for Menu--------->
+    <script>
+
+        var navLinks = document.getElementById("navLinks");
+        // Shows the menu on a small device
+        function showMenu() {
+            navLinks.style.right = "0"
+        }
+        // Hides the menu on a small device
+        function hideMenu() {
+            navLinks.style.right = "-150px"
+        }
+    </script>
+
+
+    <!----javascript for search---->
+    <script>
+        // products
+        var products = [
+            { id: 1, name: "clancy blue", page: "clancy.html" },
+            { id: 2, name: "gary black", page: "garybl.html" },
+            { id: 3, name: "gary tan", page: "garytan.html" },
+            { id: 4, name: "heavenly black", page: "heavenlybl.html" },
+            { id: 5, name: "sally black", page: "sallybl.html" },
+            { id: 6, name: "sally tan", page: "sallytan.html" },
+            { id: 7, name: "work and walk chesnut", page: "wawchesnut.html" },
+            { id: 8, name: "Gary Black", page: "garybl.html" },
+            { id: 9, name: "Clancy Blue", page: "clancy.html" },
+            { id: 10, name: "Heavenly Black", page: "heavenlybl.html" },
+            { id: 11, name: "Gary Tan", page: "garytan.html" },
+            { id: 12, name: "Sally Black", page: "sallybl.html" },
+            { id: 13, name: "Sally Tan", page: "sallytan.html" },
+            { id: 14, name: "Work and walk Chesnut", page: "wawchesnut.html" },
+
+        ];
+
+        function performSearch() {
+            // Get the search query from the input field
+            var searchInput = document.getElementById("searchInput");
+            var searchQuery = searchInput.value.trim().toLowerCase();
+
+            // Check if the entered search query matches any product name
+            var matchingProduct = products.find(function (product) {
+                return product.name.toLowerCase() === searchQuery;
+            });
+
+            // If a matching product is found, redirect to its page
+            if (matchingProduct) {
+                window.location.href = matchingProduct.page;
+            } else {
+                // Display a message or handle no matching product scenario
+                alert("Product not found. Please try again.");
+            }
+        }
+
+        // search input for "Enter" key press
+        var searchInput = document.getElementById("searchInput");
+        searchInput.addEventListener("keyup", function (event) {
+            if (event.key === "Enter") {
+                performSearch();
+            }
+        });
+    </script>
+
+
+    <!------JavaScript for text to speech----->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Check if the browser supports the SpeechSynthesis API
+            if ('speechSynthesis' in window) {
+                // Get the button and the content of the about text
+                const readButton = document.getElementById('readButton');
+                const aboutText = document.getElementById('aboutText').textContent;
+
+                // Create a SpeechSynthesisUtterance object
+                const utterance = new SpeechSynthesisUtterance(aboutText);
+
+                // Use the default speech synthesis voice
+                utterance.voice = speechSynthesis.getVoices()[0];
+
+                // Attach a click event listener to the button
+                readButton.addEventListener('click', function () {
+                    // Speak the text when the button is clicked
+                    speechSynthesis.speak(utterance);
+                });
+            } else {
+                alert('Text-to-speech is not supported in this browser.');
+            }
+        });
+    </script>
+
+
+
+</body>
+</html>
